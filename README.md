@@ -1,19 +1,41 @@
-Esta é uma versão personalizada do gerador de CRUD do Gii, baseado na versão 1.1.7 do Yii Framework.
+## Descrição
 
-Para instalar, substitua os arquivos da pasta <yii-home>/framework/gii/generators/crud por esses. *NÃO* sobrescreva a pasta "crud", renomeie-a e extraia os arquivos para uma pasta "crud" vazia.
+O Gii é uma ferramenta de geração automática de código para o Yii Framework. Ela está fundamentada nos Code Generators, um conjunto de classes e templates responsável por gerar o código e arquivos para uma funcionalidade específica. No Yii, ja temos generators para criar facilmente Models, Forms, Modules, Controllers e CRUDs.
 
-O que eu fiz:
+Esse projeto tem a finalidade localizar os Generators originais, inclusos no Yii, para português brasileiro.
 
-* Traduzi os nomes das actions e das respectivas views para o Português;
+## Instalação e Configuração
 
-Modificando o método generateActiveField() do CrudCode.php:
-* Alterei a geração de campos do formulário: campos do tipo 'date' geram um CJuiDatepicker e os campos do tipo 'datetime', um CMaskedTextfield com a máscara apropriada;
-* Campos associados a uma relação do tipo CActiveDirectory::BELONGS_TO são gerados como dropdown, preenchido com o conteúdo do modelo relacionado.
+Crie o diretório protected/gii e copie os arquivos desse repositório para ele. Feito isso, edite o arquivo protected/config/main.php e configure a propriedade generatorPaths, do módulo Gii, com o path alias do diretório recém criado:
 
-Submeti essas minhas ideias no fórum do Yii (em inglês):
-http://www.yiiframework.com/forum/index.php?/topic/17747-gii-generated-files-should-be-localized-and-more-intelligent/
+	'gii'=>array(
+		'class'=>'system.gii.GiiModule',
+		...
+	        'generatorPaths' => array(
+        	        'application.gii',
+	        )
+	),
 
-USE COM MODERAÇÃO. NÃO HÁ GARANTIAS ;)
+Pronto! Agora, os novos Generators estarão disponíveis no Gii.
 
-Fausto Gonçalves Cintra (@g0nc1n)
-goncin ARROBA gmail PONTO com
+## Generators Disponíveis
+
+### CRUD
+A versão inicial desse generator foi criada pelo @g0nc1n.
+
+Esse é o primeiro Generator localizado para o português brasileiro. Trata-se do CRUD (Create, Read, Update, Delete) Generator original do Yii Framework, adaptado para criar Actions em português.
+
+Com base em um Model as seguintes actions são criadas:
+
+- inserir 
+- exibir
+- atualizar
+- gerenciar
+
+A idéia é criar urls que façam mais sentido em português. Assim, em vez de:
+
+http://example.com/cliente/create
+
+Temos:
+
+http://example.com/cliente/inserir
