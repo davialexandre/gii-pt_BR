@@ -65,6 +65,9 @@ if($count>=7)
 ?>
 		array(
 			'class'=>'CButtonColumn',
+			'viewButtonUrl' => 'Yii::app()->controller->createUrl("exibir",array("id"=>$data->primaryKey))',
+			'updateButtonUrl' => 'Yii::app()->controller->createUrl("atualizar",array("id"=>$data->primaryKey))',
+			'deleteButtonUrl' => 'Yii::app()->controller->createUrl("excluir",array("id"=>$data->primaryKey))',
 		),
 	),
 )); ?>

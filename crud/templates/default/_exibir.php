@@ -8,7 +8,7 @@
 
 <?php
 echo "\t<b><?php echo CHtml::encode(\$data->getAttributeLabel('{$this->tableSchema->primaryKey}')); ?>:</b>\n";
-echo "\t<?php echo CHtml::link(CHtml::encode(\$data->{$this->tableSchema->primaryKey}), array('view', 'id'=>\$data->{$this->tableSchema->primaryKey})); ?>\n\t<br />\n\n";
+echo "\t<?php echo CHtml::link(CHtml::encode(\$data->{$this->tableSchema->primaryKey}), array('exibir', 'id'=>\$data->{$this->tableSchema->primaryKey})); ?>\n\t<br />\n\n";
 $count=0;
 foreach($this->tableSchema->columns as $column)
 {

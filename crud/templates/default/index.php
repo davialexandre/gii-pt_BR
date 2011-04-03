@@ -12,7 +12,7 @@ echo "\$this->breadcrumbs=array(
 );\n";
 ?>
 
-<?php $this->menu=array(
+$this->menu=array(
 	array('label'=>'Inserir <?php echo $this->modelClass; ?>', 'url'=>array('inserir')),
 	array('label'=>'Gerenciar <?php echo $this->modelClass; ?>', 'url'=>array('gerenciar')),
 );
