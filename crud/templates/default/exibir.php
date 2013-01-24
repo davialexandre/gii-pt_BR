@@ -16,7 +16,7 @@ echo "\$this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Listar <?php echo $this->modelClass; ?>', 'url'=>array('index')),
-	array('label'=>'Inserir <?php echo $this->modelClass; ?>', 'url'=>array('inseir')),
+	array('label'=>'Inserir <?php echo $this->modelClass; ?>', 'url'=>array('inserir')),
 	array('label'=>'Atualizar <?php echo $this->modelClass; ?>', 'url'=>array('atualizar', 'id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>)),
 	array('label'=>'Excluir <?php echo $this->modelClass; ?>', 'url'=>'#', 'linkOptions'=>array('submit'=>array('excluir','id'=>$model-><?php echo $this->tableSchema->primaryKey; ?>),'confirm'=>'Deseja realmente excluir este item?')),
 	array('label'=>'Gerenciar <?php echo $this->modelClass; ?>', 'url'=>array('gerenciar')),
